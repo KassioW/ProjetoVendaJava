@@ -1,9 +1,10 @@
 package teste;
 
 import model.Produto;
-import service.Venda;
-import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+
+import service.Venda;
 
 /**
  *
@@ -13,7 +14,7 @@ public class TesteVenda {
 
     @Test
     
-    
+    // declarando produtos para um teste simples
     public void testCalcularTotal() {
         Produto[] produtos = {
             new Produto("Produto 1", 2, 10.0),
@@ -21,9 +22,10 @@ public class TesteVenda {
             new Produto("Produto 3", 1, 25.0)
         };
 
-        Venda venda = new Venda(produtos);
-
+        Venda venda = new Venda(produtos); // executa a venda
+     
+        // calculo basico do total de produtos vendidos em resumo   
         double totalEsperado = 2 * 10.0 + 3 * 15.0 + 1 * 25.0;
-        assertEquals(90, venda.calcularTotal());
-    }
+      assertEquals(totalEsperado, venda.calcularTotal());    }
 }
+

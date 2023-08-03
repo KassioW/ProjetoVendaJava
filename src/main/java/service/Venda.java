@@ -22,18 +22,18 @@ public class Venda {
     
     // calculando o valor total da venda somando o subtotal dos produtos
     public double calcularTotal() {
-        double total = 0;
+    double total = 0;
         
         // percorrendo a coleção de produtos e realizando calculos com base nas suas informações
-        for (Produto produto : produtos) {
-            
-            total += produto.getQuantidade() * produto.getValorUnitario();
-        }
-        return total;
+   for (Produto produto : produtos) {
+        total += produto.getValorUnitario() * produto.getQuantidade();
     }
     
+    return total;
+}
+}
     // imprimindo um resumo da venda no terminal e listando os produtos e seus atributos
-    
+  /*  
     public void imprimirResumo() {
         
         System.out.println(" Resumo da Venda ");
@@ -46,6 +46,7 @@ public class Venda {
                     
         }
         
-        System.out.println("Total: R$" + calcularTotal());
+        System.out.println("Total: R$" + calcularTotal(quantidade));
     }
 }
+*/
